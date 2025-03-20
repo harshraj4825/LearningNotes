@@ -48,7 +48,25 @@ Using DNS
 
 So we can use DNS tricks to return backend server ips. So this blackbox(load balancer) is jsut a fancy DNS setup where by instead of returning the IP address of load balancer itself maybe instead od DNS server just returns the IP address of backend server using round robin and it is called **Load balancing with BIND.**
 
-#### Load balancing with BIND
+#### Load balancing with BIND  
+BIND(DNS Server) - Berkeley Internet Name Domain is a software of tools including the world's most widely used DNS server software.  
+**Why diificult to implement?**  
+Because one user can be more intense user so round robin wont work.  
+**How to solve session management if you have multiple server?**  
+set the session data into centralized storage. but this is the weekness in network topology. **so how will you fix this?**  
+instead of hard drive Use RAID - Redundant array of independent discs.  
+RAID0, RAID1, RAID5, RAID10 etc.  
+RAID0 - write chunck of data to multiple drive to improve performnace
+RAID1 - same data will be written into two drive  
+This will reduce dedency for session data or share state like this.  
+Sticky Session  
+- Shared Storage?
+  FC, iSCSI, MySQL, NFS (Network file system)
+- Cokees?
+
+Load Balancers:  
+Software - ELB, HAProxy, LVS
+Hardware - Barracuda, Cisco, Citrix
 
 ## Step 2: Review the scalability article  
 #### Scalability for Dummies  
