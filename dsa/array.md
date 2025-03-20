@@ -83,8 +83,7 @@ public int maxSumSubarray(int[] arr, int k) {
     return maxSum;
 }
 ```
-#### Smallest Subarray with Sum ≥ S (Variable-Size)  
-Find the length of the longest substring without repeating characters.  
+#### Smallest Subarray with Sum ≥ S (Variable-Size)    
 ```java
 public int minSubarrayLength(int S, int[] arr) {
     int minLength = Integer.MAX_VALUE, windowSum = 0, left = 0;
