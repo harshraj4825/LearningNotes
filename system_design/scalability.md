@@ -68,6 +68,16 @@ Load Balancers:
 Software - ELB, HAProxy, LVS
 Hardware - Barracuda, Cisco, Citrix
 
+#### Sticky Sessions  
+Even if you visit same website multiple time. still you will be endup will same session.  
+  - Shared Storage like FC, iSCSI, NySQL, NFS, etc. storing session, user id.
+  - Cookies?
+    Storing information cookies like storing server id into cookies. Problem: what if your ip is changing also you do not want to reviel youe ip address to the world.
+    PHP way create a big number that load balancer will remember.
+
+#### PHP Accelerators  
+
+
 ## Step 2: Review the scalability article  
 #### Scalability for Dummies  
 ###### Part 1: Clones  
