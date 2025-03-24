@@ -76,7 +76,32 @@ Even if you visit same website multiple time. still you will be endup will same 
     PHP way create a big number that load balancer will remember.
 
 #### PHP Accelerators  
+Using to Cache up code to increase processing.
 
+#### Caching
+1. **.html (through HTML)**
+   storing the page as HTML so it makes fast. All dynamic content will be cache as HTML into Filesystem(disc). Downside of this is space,same things You have stored at multiple place, If you want to change to change anything then you have to change it to every place.
+2.  **MySql Query Cache**  
+   ```SQL
+    query_cache_type=1
+  ```
+and restsart the server  
+3. **Memcached**  
+It is a memory cache.  
+What is you ran out of RAM?  
+you need to implement grabage collector by considering  
+-time to live  
+
+#### Database replication  
+Data will be there in all the server.
+Master-Slave Architechture.
+Advantage:  
+- Load balance: read will from one server and write to master. it introduce another problem?
+  What if write will be die, solution is multiple master with its sleves.
+**Load Balancer + Database Replication**
+#### Data partitioning  
+Similar kind of data will go to same place.  
+#### High Availability  
 
 ## Step 2: Review the scalability article  
 #### Scalability for Dummies  
