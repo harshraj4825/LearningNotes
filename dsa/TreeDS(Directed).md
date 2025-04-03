@@ -41,3 +41,9 @@ Examples:
 A complete binary tree where
 - **Max Heap**: Parent is greater than children.
 - **Min Heap**: Parent is smaller than children.
+
+## Binary Tree
+Representation of Node
+Node : [left-link , value , right-link];
+#### Meximum node at level i
+```max number of nodes= 2^i```
