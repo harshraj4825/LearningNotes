@@ -22,3 +22,22 @@ A tree is a hierarchical data structure that consists of nodes connected by edge
   
 no. of nodes= (n-1) edge  
 ## Type of Trees
+#### General Tree
+A tree where a node have any number of children.  
+#### Binary Tree
+Each tree has at most 2 children.
+- **Full Binary Tree** -Each node has 0 to 2 children.
+- **Complete Binary Tree**: All levels are full except possible the last one.
+- **Perfect Binary Tree** All leaf nodes are at smae level, and every node has exactly two children.
+#### Binary Search Tree (BST)
+- left subtree has smaller value then right sub tree
+
+#### Balanced Trees
+Tree where the height difference between subtrees is minimized.  
+Examples:  
+- **AVL Tree**: Self balancing BST (height diff<=1)
+- **Red Black Tree**: Used in databased & Linux Kernel
+#### Heap
+A complete binary tree where
+- **Max Heap**: Parent is greater than children.
+- **Min Heap**: Parent is smaller than children.
