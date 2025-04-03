@@ -28,7 +28,9 @@ A tree where a node have any number of children.
 Each tree has at most 2 children.
 - **Full Binary Tree** -Each node has 0 to 2 children.
 - **Complete Binary Tree**: All levels are full except possible the last one.
-- **Perfect Binary Tree** All leaf nodes are at smae level, and every node has exactly two children.
+  ```no. of leaf nodes=no. of internal nodes+1```
+- **Perfect Binary Tree** All leaf nodes are at same level, and every node's has exactly two children.
+- **Degenerate Binary Tree** : Each internal node has one child. Ex: Left skewed binary tree.
 #### Binary Search Tree (BST)
 - left subtree has smaller value then right sub tree
 
@@ -44,6 +46,10 @@ A complete binary tree where
 
 ## Binary Tree
 Representation of Node
-Node : [left-link , value , right-link];
-#### Meximum node at level i
-```max number of nodes= 2^i```
+Node : [left-link , value , right-link];  
+
+**Max number of nodes at level i = $2^i$**  
+**Maximum number of node at height h = $2^{(h+1)} - 1$**   
+**Minimum number of node at height h = h+1**  
+
+
