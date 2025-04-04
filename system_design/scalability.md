@@ -6,7 +6,7 @@
 - Database replication
 - Database partitioning
 
-#### Virtual Scaling  
+#### Virtical Scaling  
 
 **Q. What kind fo feature you are looking for or expecting minimally in a any web hosting company that you choose?**  
 
@@ -18,12 +18,14 @@
 **VPS** - Company takes superfast server with lots of RAM of CPU, lots of disk space and they chop it up into the illusion of multiple servers using Hypervisor.  
 System Admin can acess your file etc. So you are not sucure.  
 If you need complete privacy than you are probably going private own setup.  
+
 **Amazon web services VPS (EC2)** 
 Elastic Compute Cloud that essentially let you self-service and spawn as many virtual machines. You can automate the process of spawning more web servers more database servers if you happen to suddenly get popular even overnight.  
 
 **Q. Suppose you website has been super populer and this website has maybe static web content HTML, files, gifs and like dynamic content like PHP code, database like mysql. How do you go about scaling your site so that it can handle more users well?**   
 Straightforward approach: Virtical Scaling   
 Get more resources like RAM, DISK space or equivalently money  
+
 **Q Why is virtical scaling not necessatily a full solution?**  
 Real world constraints: At some point you are either going to exhaust your own financial resources or just the state-of-the-art in technology because world has not made a machine that has as many resources as you need.  
 CPU intelligent : machine has 4 core CPU in a machine that is truly parallel. then each core can spawn multiple processes/threads.
@@ -32,6 +34,7 @@ CPU intelligent : machine has 4 core CPU in a machine that is truly parallel. th
 Intead of one, use bunch of servers.  
 We inbound HTTP request we somehow want to distribute that request over all of the verious web serves.  
 You have now servers but now how you will decide which server will server your request.  
+
 **Load Balancing**  
 Client --> Load balancer(public ips) --> servers(private/public ips) 
  
@@ -66,7 +69,7 @@ Sticky Session
 - Cokees?  
 
 Load Balancers:  
-Software - ELB, HAProxy, LVS
+Software - ELB, HAProxy, LVS  
 Hardware - Barracuda, Cisco, Citrix
 
 #### Sticky Sessions  
@@ -86,12 +89,12 @@ Storing the page as HTML so it makes fast. All dynamic content will be cache as 
    ```SQL
     query_cache_type=1
   ```
-and restsart the server  
+  and restsart the server  
 3. **Memcached**  
-It is a memory cache.  
-What is you ran out of RAM?  
-you need to implement grabage collector by considering  
--time to live  
+  It is a memory cache.  
+  What is you ran out of RAM?  
+  you need to implement grabage collector by considering  
+  -time to live  
 
 #### Database replication  
 Data will be there in all the server.
