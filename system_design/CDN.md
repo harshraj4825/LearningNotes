@@ -1,6 +1,17 @@
 ## Content delivery Network
-A cdn is a globally distributed of proxy servers, serving content from locations closer to the user. Generally, static files such as HTML/CSS/JS, photos, and videos are served from CDN. Although some CDNs such as 
-Amazon CloudFront support dynamic content. The site's DNS resolution will tell clients which server to contact.  
+- **What is CDN**  
+It is a network of geographically distributed servers that work together to deliver content (like images, videos, HTML, CSS, JS files) faster and more reliably to users.
+- Why do we need a CDN?
+  Withoud a CDN:
+  - Your server (e.g., in Mumbai) serves all requests.
+  - A user from the US would get slower response due to distance (latency).
+  - High traffic can overload your server.
+  With CDN:
+  - The content is cached and served from a nearby server.
+  - Response is faster and more scalable.
+  - Your origin server gets less load.
+
+A cdn is a globally distributed of proxy servers, serving content from locations closer to the user. Generally, static files such as HTML/CSS/JS, photos, and videos are served from CDN. Although some CDNs such as Amazon CloudFront support dynamic content. The site's DNS resolution will tell clients which server to contact.  
 
 Serving content from CDBs can significantly improve the performace in two ways
 - Users recieve content from data centers close to them.
