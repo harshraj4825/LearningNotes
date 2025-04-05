@@ -10,6 +10,9 @@ It is a network of geographically distributed servers that work together to deli
   - The content is cached and served from a nearby server.
   - Response is faster and more scalable.
   - Your origin server gets less load.
+- So CDM is cache?
+  CDN = More Than Just Cache, while caching is the core feature of a CDN.
+  **CDN is caching + security + performance optimization + edge compute.**  
 
 A cdn is a globally distributed of proxy servers, serving content from locations closer to the user. Generally, static files such as HTML/CSS/JS, photos, and videos are served from CDN. Although some CDNs such as Amazon CloudFront support dynamic content. The site's DNS resolution will tell clients which server to contact.  
 
