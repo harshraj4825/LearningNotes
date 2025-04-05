@@ -122,3 +122,9 @@ void postorder(Node node){
 }
 ```
 #### Level order traversal
+#### Q Construt a Binary tree frpm preorder & Inorder
+#### Q Construt a Binary tree frpm postorder & Inorder
+#### Q Construt a Binary tree frpm preorder & postorder
+- It is not possible to construct uniquie binary tree.
+- But unique Complete Binary Tree can be contructed.
+
