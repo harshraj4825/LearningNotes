@@ -16,12 +16,16 @@
    This model also known as "Blackboard"; all worker monitor information from the shared space and contributes parial knowledge back to the blackboard. This information is continuously enriched until a solution is reached.
    This pattern is used in JavaSpace and also commercial product GigaSpace.
    ![image](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjODXfMYS0n8ClctxFLT_uiWFQwNfctdCvDGKT2-CWpRmfuMtCTG1D8V8pavsporz_DlbH8-c00-XzzLic6yBUqwchCiFjn7t853hBG264s1zF6w4ced-Sto3nVl4sNJXoiuD6j8o3EwfmP/s1600/P4.png)
-5. Pipe and Filter
+5. Pipe and Filter  
    This model also known as "Data Flow Processing"; All workers connected by pipes where data is flow across.
    This pattern is very common EAI pattern
-   [!image](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgaZl7AMJhO2bje3VBYsVIS6re_l2p3M1XsF9FJ4xR_MIJfiwwGvQFgnvNctokR09C1PuMAzl6qd6lGSex46VLl6OsUbMAS55T1DyPQIkc6HV5B4nO6IRvL-XRxN_b9GlQBOVGsJA3mhE1w/s1600/P5.png)
-6. Map Reduce
+   ![image](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgaZl7AMJhO2bje3VBYsVIS6re_l2p3M1XsF9FJ4xR_MIJfiwwGvQFgnvNctokR09C1PuMAzl6qd6lGSex46VLl6OsUbMAS55T1DyPQIkc6HV5B4nO6IRvL-XRxN_b9GlQBOVGsJA3mhE1w/s1600/P5.png)
+6. Map Reduce:  
    This model is targetting batch jobs where disk I/O is the major bottleneck. It use a distributed file system so that disk I/O can be done in parallel.
    This pattern is used in many of Google's internal application, as well as implemented in open source Hadoop parallel processing framwork.
-   [!image](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg8o6Kw2cwTXE0HvzfCY1-Fm3fYz3JsC3T8On7sZ0Ts3q6iWeh7zn887be9sUcNcEtkaoRdpf0GoSYoXQ-Yh59ZvxA3l3x9S0Xt9etDFugaNYQALVYrI7LqBDnl9s0YoYPNcla8Q54zRfLI/s1600/P7.png)
-
+   ![image](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg8o6Kw2cwTXE0HvzfCY1-Fm3fYz3JsC3T8On7sZ0Ts3q6iWeh7zn887be9sUcNcEtkaoRdpf0GoSYoXQ-Yh59ZvxA3l3x9S0Xt9etDFugaNYQALVYrI7LqBDnl9s0YoYPNcla8Q54zRfLI/s1600/P7.png)
+7. Bulk Syschronous Parellel  
+   This model is based on lock-step execution across all workers, coordinated by a master. Each worker repeat the following steps until the exit condition is reached, when there is no more active workers.
+   1. Each worker read data from input.
+   2. Each worker perform local processing based on the read data.
+   3. Each worker push local result along its direct connection.
