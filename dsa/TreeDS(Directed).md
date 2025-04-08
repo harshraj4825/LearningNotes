@@ -128,3 +128,14 @@ void postorder(Node node){
 - It is not possible to construct uniquie binary tree.
 - But unique Complete Binary Tree can be contructed.
 
+
+**Q. Insert/Remove node from Tree data** 
+Deletion:
+case-1 0 child
+case-2 1 child
+case-3 2 child
+  1. Inorder predecessor
+     largest element in left tree
+  2. Inorder successor
+     Smallest element from right
+
