@@ -29,3 +29,9 @@
    1. Each worker read data from input.
    2. Each worker perform local processing based on the read data.
    3. Each worker push local result along its direct connection.
+   ![image](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjUUwz1xF9WP1MmcZCIUSmc2jOG0u_aN105HNR3aX0Zj0Yvyv4BBDFhYwJYaSfTgOD8jm3kwFxhei_9IRkaKIf0BoU_NF0g8Xh1QxK8wD51lUVIWg6zRVKTEV6IT6FD3wbm1E5fjH0jBSbO/s1600/P8.png)
+
+8. Execution Orchestrator
+   This model is based on an instelligent scheduler/orchestrator to schedule ready-to-run tasks (based on a dependency graph) across a clusters of dumb workers.
+![image](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgqaEyJWVci394vQjOLzWDqGB4PPJqoMXZNLE9guoDTBkBBd_R6RVRY2T3OJEh61JyIxjisc8M3QcWMxEq-wDU6owoBrdmTwQPyo6zH-U0sHtsXfxokuJiU_6vt7TGI9WRX9nyjsAo3DlUM/s1600/P8.png)
+   
