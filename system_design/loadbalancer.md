@@ -33,4 +33,25 @@ Disdantage(s): horizontal scalling
 - The load balancer can become a performace bottleneck if it does not have enough resources or if it is not configured properly.
 - Introducing a laod balancer to help eliminate single point of failure results incresed complexity.
 
-#### Round robin or wrighted round robin
+### Load Balancing Algorithms
+#### Random 
+Distribute the request evenly.
+#### Round robin
+Load balancer will still distribute requests equally. in cyclic way.
+#### Weighted Round Robin
+The weighted round robin is similar to the round robin in that the way request are assigned to the nodes is still cyclic, albeit with a twist. The node with the higher specs will be apportioned a greater number of requests.  
+How would the load balancer know which node has higher capacity?
+      You tell it beforeheand, and assign weights to each node.
+      ![image](https://www.jscape.com/hubfs/images/weighted_round_robin.png)
+
+#### Least Connections
+Algorithm takes into consideration the number of current connections each server has. When a client attemps to connect, the load balancer will try to determine which server has the least number of connections and then assign the new connection to that server.
+#### Weighted Least connections
+It consider number of clients currently connected to each server.
+#### Layer 4 load balancing
+Layer 4 load balancers look at into at the transport layer to decide how to distribute requests. Generally, this involves the source, distination IP addresses, and ports in the header, but not the contents of the packet. Layer 4 load balancers forward network packets to and from the upstream, performing Network Address Translation (NAT).
+
+#### Layer 7 load balancing
+Layer 7 load balancers look at the application layer to decide how to distribute requests, This involve contents of the header, message, and cookies. Layer 7 load balancers terminate network traffic, reads the message, makes a load-balancing decision, then opens a connection to the selected server. For example, a layer 7 load balancer can direct video traffic to servers that host videos while directing more sensitive user billing traffic to security-hardened servers.  
+
+At the cost of flexibility, layer 4 load balancing requires less time and computing resources than layer 7, although the performace impact can be minmal on modern commodity hardware.  
