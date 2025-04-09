@@ -139,3 +139,8 @@ case-3 2 child
   2. Inorder successor
      Smallest element from right
 
+
+## AVL Tree
+- It is a BST
+- Height of left subtree or heigh of right subtree={-1,0,1} : Balance Factor
+- 
